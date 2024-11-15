@@ -1,0 +1,7 @@
+// Create your own map
+$custom-colors: (
+  "gold": #F8D06B,
+  "brown" :#7f4200
+);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
