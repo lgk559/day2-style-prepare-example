@@ -1,10 +1,16 @@
-<script setup></script>
-
 <template>
-  <h1>about</h1>
-  <p class="title">全域共用樣式</p>
+  <div class="main px-3 border bg-light">
+    <h1>about的內容</h1>
+  </div>
+  
+
 </template>
 
-<style lang="scss">
+<script setup>
+
+</script>
+
+
+<style scoped>
 
 </style>
