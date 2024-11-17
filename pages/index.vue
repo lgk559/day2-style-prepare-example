@@ -7,6 +7,7 @@
       price="NT$10000"
       buttonText="馬上預約"
     />
+    <HomeBanner />
   </div>
 </template>
 
