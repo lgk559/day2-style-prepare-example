@@ -9,7 +9,7 @@
 }
 
 .nav-link {
-    &.router-link-exact-active {
+    &.active {
         color: red;
     }
 }

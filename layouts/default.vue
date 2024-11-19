@@ -5,7 +5,10 @@
     頁首(模板預設)
     <ul class="nav">
       <li class="nav-item">
-        <NuxtLink to="/" class="nav-link" aria-current="page">首頁</NuxtLink>
+        <NuxtLink to="/" class="nav-link">首頁</NuxtLink>
+      </li>
+      <li class="nav-item">
+        <NuxtLink to="/room" class="nav-link">房型</NuxtLink>
       </li>
       <li class="nav-item">
         <NuxtLink to="/about" class="nav-link">關於我</NuxtLink>
