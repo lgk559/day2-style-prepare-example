@@ -1,17 +1,41 @@
 <template>
   <div class="main px-3 border bg-light">
-    <ProductCard
-      imageSrc="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/typescript-hotel/%E6%A1%8C%E6%A9%9F%E7%89%88/room2-1.png"
-      altText="享受高級的住宿體驗，尊爵雙人房提供給您舒適寬敞的空間和精緻的裝潢"
-      title="尊爵雙人房"
-      price="NT$10000"
-      buttonText="馬上預約"
-    />
-    <HomeBanner />
+
+    <p>可藉由取不同變數，讓兩組計數器不互相影響</p>
+    <button type='button' @click="decrement1">減少</button>
+    {{ count1 }}
+    <button type='button' @click="increment1">增加</button>
+
+    <br>
+
+    <button type='button' @click="decrement2">減少</button>
+    {{ count2 }}
+    <button type='button' @click="increment2">增加</button>
+
+    <p>新聞列表：</p>
+    <NewsCard v-for="item in newsList.result" 
+      :key="item._id" :title="item.title" :image="item.image" :description="item.description" :created-at="item.createdAt" :updated-at="item.updatedAt" />
+      
+    <ClientOnly>
+      <Loading v-model:active="isLoading" />
+    </ClientOnly>
+
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+  import Loading from "vue-loading-overlay";
+  import "vue-loading-overlay/dist/css/index.css";
+  const { count: count1, increment: increment1, decrement: decrement1 } = useCounter();
+  const { count: count2, increment: increment2, decrement: decrement2 } = useCounter();
+  const {newsList, isLoading, getNewsList} = useHome();
+
+  onMounted(()=>{
+    getNewsList();
+  })
+
+
+</script>
 
 <style scoped>
 

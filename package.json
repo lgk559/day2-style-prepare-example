@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "nuxt": "^3.12.4",
     "swiper": "^11.1.14",
-    "vue": "latest"
+    "vue": "latest",
+    "vue-loading-overlay": "^6.0.6"
   },
   "devDependencies": {
     "bootstrap": "^5.3.3",
